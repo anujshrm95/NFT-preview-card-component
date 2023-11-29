@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Overpass&display=swap');
+
+
+
+:root{
+    --Softblue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Verydarkblue : hsl(217, 54%, 11%);
+    --Verydark-blue : hsl(216, 50%, 16%);
+    --Very-dark-blue : hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+
+body{
+    background-color:var(--Verydarkblue);
+    font-size: 18px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: "overpass",sans-serif;
+}
+.card{
+    width: 280px;
+    background-color: var(--Verydark-blue);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1.2rem;
+    margin: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 20px 25px 15px rgba(0, 0, 0, 0.05),
+    0px 40px 30px 15px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    overflow: hidden;
+    
+}
+.img {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 10px;
+    
+}
+.img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block;
+}
+.img::after {
+    --aqua: hsla(178, 100%, 50%, 0.5);
+    content: url(./images/icon-view.svg);
+    background: var(--aqua);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: all 0.25s ease;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.img:hover::after {
+    opacity: 1;
+}
+.heading{
+    font-weight: 600;
+    margin: 0.5rem;
+}
+.heading a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+.heading a:hover{
+    color: var(--Cyan);
+}
+.subheading{
+    font-weight: 300;
+    font-size: 15px;
+    color: var(--Softblue);
+    margin:0.5rem;
+}
+.lowersection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap:70px;
+}
+.price{
+    font-size: 15px;
+    font-weight:300 ;
+    color: var(--Cyan);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 90px;
+    margin: 0.5rem;
+}
+.price img{
+    width: 10px;
+    height: 15px;
+}
+.days{
+    font-size: 15px;
+    font-weight:300 ;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 90px;
+    color: var(--Softblue);
+}
+.days img{
+    width: 15px;
+    height:15px;
+}
+.line{
+    width: 100% ;
+    
+}
+
+.author{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 15px;
+    margin-right: 60px;
+}
+.author a{
+    font-size:15px;
+    text-decoration: none;
+}
+.author img{
+    width: 25px;
+    height: 25px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+.author p{
+    color: var(--Softblue);
+    margin-left: 10px;
+    margin-right: 5px;
+}
+.author a{
+    color: white;
+    cursor: pointer;
+}
+.author a:hover{
+    color: var(--Cyan);
+}
+.line hr{
+    fill: var(--Softblue);
+}
